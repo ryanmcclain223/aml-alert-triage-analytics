@@ -2,27 +2,33 @@
 
 **INFO 320 Final Project | Anti-Money Laundering (AML) Transaction Monitoring**
 
-An investigation-capacity simulation comparing rule-based alerts with machine-learning models, network-context features, and a feedback loop that retrains on previously reviewed cases.
+A simulation of a bank's AML review team with a fixed daily capacity. It compares rule-based alerts with machine-learning models, then tests two upgrades: network-derived features and a feedback loop that retrains on investigator outcomes.
 
 ## Business question
 
-A bank's investigators have limited time. Which alerts should they review first, and how can the monitoring system adapt as patterns change?
+Kestrel, a fictional bank, can review only 50 alerts a day. Which alerts should its investigators see, and which monitoring upgrades are worth their added cost?
 
-This project evaluates detection **at a fixed daily review capacity**, rather than ranking models only by traditional classification scores. The intended audience is a fictional bank's BSA Officer, CFO, and Model Risk Committee.
+Systems are judged by how much laundering they catch within that fixed capacity, not by accuracy. Laundering is rare enough that a system flagging nothing would be 99.75% accurate. The audience is Kestrel's BSA Officer, CFO and Model Risk Committee.
 
 ## Data and approach
 
 - **Data:** Synthetic SAML-D transactions (approximately 9.5 million transactions).
 - **Unit of evaluation:** A sender account on a particular day (sender-day); this is **not** the same as an individual transaction or confirmed SAR.
+- **History:** Oct 7–Dec 31, 2022, used for feature design, rule calibration and initial training.
 - **Test period:** January 1–August 23, 2023 (235 calendar days).
 - **Positive sender-days in test period:** 6,861.
-- **Review policy:** At 50 cases/day, the model prioritizes 45 high-scoring cases and selects five additional cases for exploration.
+- **Review policy:** At 50 cases/day, the model prioritizes 45 high-scoring cases plus 5 random cases from just below the cutoff (46-200) to find near-misses.
 - **Models:** Rules baseline, logistic regression, and LightGBM, evaluated as static or monthly-adaptive systems with nine behavioral or 11 behavioral-plus-network features.
-- **Feedback simulation:** Monthly retraining uses previously selected, simulated investigator outcomes; labels come from synthetic ground truth.
+- **Feedback simulation:** Monthly retraining uses previously selected, simulated investigator outcomes.
+- **Hypotheses**
+**H1:** A machine-learning model catches more laundering than the rules at 50 reviews a day.
+**H2:** Network-derived features improve detection.
+**H3:** Monthly retraining on investigator outcomes beats the same model left unchanged.
+**H4 (future pilot):** An AI investigation layer improves on the model alone at an acceptable cost per added case. Designed, not run.
 
 ## Results
 
-All rows below use **11,750 total reviews over 235 days**:
+All rows below use **11,750 total reviews 50 a day over 235 days**:
 
 | System | Cases caught | Recall | Precision |
 | --- | ---: | ---: | ---: |
@@ -67,21 +73,18 @@ README.md
 
 ### Tableau
 
-The five exported CSVs support three planned dashboards: **Detection Performance**, **Learning and Detection Gaps**, and **Operational Impact**. Tableau Public publishing and the final workbook are in progress.
+The five exported CSVs support three dashboards: **Detection Performance**, **Learning and Detection Gaps**, and **Operational Impact**.
 
 ## Important limitations
 
 - **Synthetic data:** Reported results do not demonstrate performance at a real financial institution.
-- **Simulated feedback:** Synthetic labels are assumed available after investigation; actual bank investigations can take longer and have uncertain outcomes.
+- **Simulated feedback:** reviewed outcomes are always correct and arrive at month-end. Real investigations take longer and are less certain.
 - **Selection bias:** Retraining on reviewed alerts can reinforce which cases get labeled. The five exploratory reviews help but do not remove this risk.
 - **Model risk and drift:** Real deployment would require independent validation, monitoring, model change controls, human oversight, and operational testing.
 - **Capacity experiments:** Every tested limit reserves five exploration reviews per day, so the fraction of exploration cases changes as capacity changes.
+- **Governance:** real deployment would need independent validation, ongoing monitoring and model change controls. Under SR 26-2 (April 2026), monthly retraining counts as a model change.
 - **Computing/reproducibility:** The original notebooks use Google Colab and paths to files stored in Google Drive. Large raw/processed datasets and serialized models are excluded from this repository.
 
 ## Running the notebooks
 
-The notebooks were developed in **Google Colab** with Python, pandas, scikit-learn, and LightGBM. They expect the SAML-D source data and intermediate artifacts in Google Drive; adapt the Drive folder paths if reproducing. The complete 9.5-million-row dataset is intentionally not committed.
-
-## Project status
-
-Modeling, feedback-loop experiments, and CSV exports are complete. Tableau dashboards and the presentation/report are being prepared.
+The notebooks were built in **Google Colab** with Python, pandas, scikit-learn and LightGBM. They read SAML-D and intermediate files from Google Drive, so update the Drive paths before running. The raw and processed datasets and the saved models are not in this repo because of their size.
