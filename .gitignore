@@ -1,0 +1,31 @@
+# macOS and archives
+.DS_Store
+__MACOSX/
+._*
+*.zip
+
+# Python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local datasets and generated model artifacts
+SAML-D_cleaned.csv
+SAML-D_cleaned*.parquet
+sender_day_features*.parquet
+deployment_scores*.parquet
+historical_reviews*.parquet
+trained_models*.joblib
+*.pkl
+*.pickle
+
+# Sensitive credentials / local configuration
+.env
+.env.*
+!.env.example
+*credentials*.json
+*service_account*.json
+*.pem
+*.key
