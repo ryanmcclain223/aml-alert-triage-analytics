@@ -1,0 +1,10 @@
+Model,Reviews,Caught,Precision (%),Recall (%)
+Rules,11750,163,1.39,2.38
+Static LR (9),11750,31,0.26,0.45
+Adaptive LR (9),11750,414,3.52,6.03
+Static LightGBM (9),11750,225,1.91,3.28
+Adaptive LightGBM (9),11750,455,3.87,6.63
+Static LR (11),11750,33,0.28,0.48
+Adaptive LR (11),11750,451,3.84,6.57
+Static LightGBM (11),11750,254,2.16,3.7
+Adaptive LightGBM (11),11750,716,6.09,10.44

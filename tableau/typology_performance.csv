@@ -1,0 +1,154 @@
+Model,Laundering_type,Total Cases,Caught,Training,Features,Network Related,Recall (%)
+Rules,structuring,1373,6,Rules,Rules,False,0.44
+Rules,cash_withdrawal,801,1,Rules,Rules,False,0.12
+Rules,deposit_send,732,22,Rules,Rules,False,3.01
+Rules,smurfing,710,2,Rules,Rules,False,0.28
+Rules,layered_fan_in,528,7,Rules,Rules,True,1.33
+Rules,layered_fan_out,322,1,Rules,Rules,True,0.31
+Rules,stacked_bipartite,322,1,Rules,Rules,True,0.31
+Rules,cycle,312,11,Rules,Rules,True,3.53
+Rules,scatter_gather,264,3,Rules,Rules,True,1.14
+Rules,bipartite,257,3,Rules,Rules,True,1.17
+Rules,fan_in,250,5,Rules,Rules,True,2.0
+Rules,gather_scatter,229,1,Rules,Rules,True,0.44
+Rules,behavioural_change_2,214,60,Rules,Rules,False,28.04
+Rules,behavioural_change_1,206,22,Rules,Rules,False,10.68
+Rules,single_large,172,12,Rules,Rules,False,6.98
+Rules,fan_out,128,6,Rules,Rules,True,4.69
+Rules,over_invoicing,41,0,Rules,Rules,False,0.0
+Static LR (9),structuring,1373,17,Static,9,False,1.24
+Static LR (9),cash_withdrawal,801,0,Static,9,False,0.0
+Static LR (9),deposit_send,732,1,Static,9,False,0.14
+Static LR (9),smurfing,710,0,Static,9,False,0.0
+Static LR (9),layered_fan_in,528,0,Static,9,True,0.0
+Static LR (9),layered_fan_out,322,3,Static,9,True,0.93
+Static LR (9),stacked_bipartite,322,0,Static,9,True,0.0
+Static LR (9),cycle,312,2,Static,9,True,0.64
+Static LR (9),scatter_gather,264,1,Static,9,True,0.38
+Static LR (9),bipartite,257,1,Static,9,True,0.39
+Static LR (9),fan_in,250,0,Static,9,True,0.0
+Static LR (9),gather_scatter,229,0,Static,9,True,0.0
+Static LR (9),behavioural_change_2,214,0,Static,9,False,0.0
+Static LR (9),behavioural_change_1,206,6,Static,9,False,2.91
+Static LR (9),single_large,172,0,Static,9,False,0.0
+Static LR (9),fan_out,128,0,Static,9,True,0.0
+Static LR (9),over_invoicing,41,0,Static,9,False,0.0
+Adaptive LR (9),structuring,1373,62,Adaptive,9,False,4.52
+Adaptive LR (9),cash_withdrawal,801,60,Adaptive,9,False,7.49
+Adaptive LR (9),deposit_send,732,62,Adaptive,9,False,8.47
+Adaptive LR (9),smurfing,710,2,Adaptive,9,False,0.28
+Adaptive LR (9),layered_fan_in,528,22,Adaptive,9,True,4.17
+Adaptive LR (9),layered_fan_out,322,7,Adaptive,9,True,2.17
+Adaptive LR (9),stacked_bipartite,322,3,Adaptive,9,True,0.93
+Adaptive LR (9),cycle,312,10,Adaptive,9,True,3.21
+Adaptive LR (9),scatter_gather,264,10,Adaptive,9,True,3.79
+Adaptive LR (9),bipartite,257,4,Adaptive,9,True,1.56
+Adaptive LR (9),fan_in,250,8,Adaptive,9,True,3.2
+Adaptive LR (9),gather_scatter,229,1,Adaptive,9,True,0.44
+Adaptive LR (9),behavioural_change_2,214,98,Adaptive,9,False,45.79
+Adaptive LR (9),behavioural_change_1,206,52,Adaptive,9,False,25.24
+Adaptive LR (9),single_large,172,9,Adaptive,9,False,5.23
+Adaptive LR (9),fan_out,128,2,Adaptive,9,True,1.56
+Adaptive LR (9),over_invoicing,41,2,Adaptive,9,False,4.88
+Static LightGBM (9),structuring,1373,2,Static,9,False,0.15
+Static LightGBM (9),cash_withdrawal,801,2,Static,9,False,0.25
+Static LightGBM (9),deposit_send,732,1,Static,9,False,0.14
+Static LightGBM (9),smurfing,710,1,Static,9,False,0.14
+Static LightGBM (9),layered_fan_in,528,2,Static,9,True,0.38
+Static LightGBM (9),layered_fan_out,322,1,Static,9,True,0.31
+Static LightGBM (9),stacked_bipartite,322,0,Static,9,True,0.0
+Static LightGBM (9),cycle,312,0,Static,9,True,0.0
+Static LightGBM (9),scatter_gather,264,2,Static,9,True,0.76
+Static LightGBM (9),bipartite,257,1,Static,9,True,0.39
+Static LightGBM (9),fan_in,250,0,Static,9,True,0.0
+Static LightGBM (9),gather_scatter,229,0,Static,9,True,0.0
+Static LightGBM (9),behavioural_change_2,214,100,Static,9,False,46.73
+Static LightGBM (9),behavioural_change_1,206,106,Static,9,False,51.46
+Static LightGBM (9),single_large,172,0,Static,9,False,0.0
+Static LightGBM (9),fan_out,128,6,Static,9,True,4.69
+Static LightGBM (9),over_invoicing,41,1,Static,9,False,2.44
+Adaptive LightGBM (9),structuring,1373,31,Adaptive,9,False,2.26
+Adaptive LightGBM (9),cash_withdrawal,801,128,Adaptive,9,False,15.98
+Adaptive LightGBM (9),deposit_send,732,37,Adaptive,9,False,5.05
+Adaptive LightGBM (9),smurfing,710,1,Adaptive,9,False,0.14
+Adaptive LightGBM (9),layered_fan_in,528,13,Adaptive,9,True,2.46
+Adaptive LightGBM (9),layered_fan_out,322,8,Adaptive,9,True,2.48
+Adaptive LightGBM (9),stacked_bipartite,322,5,Adaptive,9,True,1.55
+Adaptive LightGBM (9),cycle,312,19,Adaptive,9,True,6.09
+Adaptive LightGBM (9),scatter_gather,264,10,Adaptive,9,True,3.79
+Adaptive LightGBM (9),bipartite,257,6,Adaptive,9,True,2.33
+Adaptive LightGBM (9),fan_in,250,8,Adaptive,9,True,3.2
+Adaptive LightGBM (9),gather_scatter,229,5,Adaptive,9,True,2.18
+Adaptive LightGBM (9),behavioural_change_2,214,101,Adaptive,9,False,47.2
+Adaptive LightGBM (9),behavioural_change_1,206,76,Adaptive,9,False,36.89
+Adaptive LightGBM (9),single_large,172,2,Adaptive,9,False,1.16
+Adaptive LightGBM (9),fan_out,128,5,Adaptive,9,True,3.91
+Adaptive LightGBM (9),over_invoicing,41,0,Adaptive,9,False,0.0
+Static LR (11),structuring,1373,13,Static,11,False,0.95
+Static LR (11),cash_withdrawal,801,5,Static,11,False,0.62
+Static LR (11),deposit_send,732,1,Static,11,False,0.14
+Static LR (11),smurfing,710,0,Static,11,False,0.0
+Static LR (11),layered_fan_in,528,1,Static,11,True,0.19
+Static LR (11),layered_fan_out,322,0,Static,11,True,0.0
+Static LR (11),stacked_bipartite,322,1,Static,11,True,0.31
+Static LR (11),cycle,312,1,Static,11,True,0.32
+Static LR (11),scatter_gather,264,4,Static,11,True,1.52
+Static LR (11),bipartite,257,1,Static,11,True,0.39
+Static LR (11),fan_in,250,2,Static,11,True,0.8
+Static LR (11),gather_scatter,229,0,Static,11,True,0.0
+Static LR (11),behavioural_change_2,214,1,Static,11,False,0.47
+Static LR (11),behavioural_change_1,206,0,Static,11,False,0.0
+Static LR (11),single_large,172,3,Static,11,False,1.74
+Static LR (11),fan_out,128,0,Static,11,True,0.0
+Static LR (11),over_invoicing,41,0,Static,11,False,0.0
+Adaptive LR (11),structuring,1373,64,Adaptive,11,False,4.66
+Adaptive LR (11),cash_withdrawal,801,27,Adaptive,11,False,3.37
+Adaptive LR (11),deposit_send,732,70,Adaptive,11,False,9.56
+Adaptive LR (11),smurfing,710,2,Adaptive,11,False,0.28
+Adaptive LR (11),layered_fan_in,528,24,Adaptive,11,True,4.55
+Adaptive LR (11),layered_fan_out,322,7,Adaptive,11,True,2.17
+Adaptive LR (11),stacked_bipartite,322,2,Adaptive,11,True,0.62
+Adaptive LR (11),cycle,312,29,Adaptive,11,True,9.29
+Adaptive LR (11),scatter_gather,264,13,Adaptive,11,True,4.92
+Adaptive LR (11),bipartite,257,4,Adaptive,11,True,1.56
+Adaptive LR (11),fan_in,250,9,Adaptive,11,True,3.6
+Adaptive LR (11),gather_scatter,229,3,Adaptive,11,True,1.31
+Adaptive LR (11),behavioural_change_2,214,105,Adaptive,11,False,49.07
+Adaptive LR (11),behavioural_change_1,206,71,Adaptive,11,False,34.47
+Adaptive LR (11),single_large,172,15,Adaptive,11,False,8.72
+Adaptive LR (11),fan_out,128,1,Adaptive,11,True,0.78
+Adaptive LR (11),over_invoicing,41,5,Adaptive,11,False,12.2
+Static LightGBM (11),structuring,1373,0,Static,11,False,0.0
+Static LightGBM (11),cash_withdrawal,801,1,Static,11,False,0.12
+Static LightGBM (11),deposit_send,732,1,Static,11,False,0.14
+Static LightGBM (11),smurfing,710,0,Static,11,False,0.0
+Static LightGBM (11),layered_fan_in,528,0,Static,11,True,0.0
+Static LightGBM (11),layered_fan_out,322,0,Static,11,True,0.0
+Static LightGBM (11),stacked_bipartite,322,1,Static,11,True,0.31
+Static LightGBM (11),cycle,312,0,Static,11,True,0.0
+Static LightGBM (11),scatter_gather,264,0,Static,11,True,0.0
+Static LightGBM (11),bipartite,257,0,Static,11,True,0.0
+Static LightGBM (11),fan_in,250,0,Static,11,True,0.0
+Static LightGBM (11),gather_scatter,229,0,Static,11,True,0.0
+Static LightGBM (11),behavioural_change_2,214,126,Static,11,False,58.88
+Static LightGBM (11),behavioural_change_1,206,125,Static,11,False,60.68
+Static LightGBM (11),single_large,172,0,Static,11,False,0.0
+Static LightGBM (11),fan_out,128,0,Static,11,True,0.0
+Static LightGBM (11),over_invoicing,41,0,Static,11,False,0.0
+Adaptive LightGBM (11),structuring,1373,62,Adaptive,11,False,4.52
+Adaptive LightGBM (11),cash_withdrawal,801,115,Adaptive,11,False,14.36
+Adaptive LightGBM (11),deposit_send,732,85,Adaptive,11,False,11.61
+Adaptive LightGBM (11),smurfing,710,5,Adaptive,11,False,0.7
+Adaptive LightGBM (11),layered_fan_in,528,17,Adaptive,11,True,3.22
+Adaptive LightGBM (11),layered_fan_out,322,13,Adaptive,11,True,4.04
+Adaptive LightGBM (11),stacked_bipartite,322,7,Adaptive,11,True,2.17
+Adaptive LightGBM (11),cycle,312,48,Adaptive,11,True,15.38
+Adaptive LightGBM (11),scatter_gather,264,11,Adaptive,11,True,4.17
+Adaptive LightGBM (11),bipartite,257,7,Adaptive,11,True,2.72
+Adaptive LightGBM (11),fan_in,250,9,Adaptive,11,True,3.6
+Adaptive LightGBM (11),gather_scatter,229,17,Adaptive,11,True,7.42
+Adaptive LightGBM (11),behavioural_change_2,214,175,Adaptive,11,False,81.78
+Adaptive LightGBM (11),behavioural_change_1,206,134,Adaptive,11,False,65.05
+Adaptive LightGBM (11),single_large,172,7,Adaptive,11,False,4.07
+Adaptive LightGBM (11),fan_out,128,3,Adaptive,11,True,2.34
+Adaptive LightGBM (11),over_invoicing,41,1,Adaptive,11,False,2.44
