@@ -71,9 +71,11 @@ README.md
 4. **04 — Modeling:** Build rule-based and static machine-learning baselines.
 5. **05 — Feedback & Network Features:** Simulate daily review queues, monthly retraining, network features, capacity sensitivity, and Tableau exports.
 
-### Tableau
+T### Tableau
 
-The five exported CSVs support three dashboards: **Detection Performance**, **Learning and Detection Gaps**, and **Operational Impact**.
+The five exported CSVs support three interactive dashboards: **Detection Performance**, **Learning and Detection Gaps**, and **Operational Impact**.
+
+**[View Interactive Tableau Workbook](https://us-east-1.online.tableau.com/#/site/info320_003/workbooks/5985947?:origin=card_share_link)**
 
 ## Important limitations
 
